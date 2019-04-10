@@ -88,13 +88,9 @@ export default $1;
 endsnippet
 
 snippet rsc "React Styled Component" b
-import styled from 'styled-components';
-
-const ${1:`!v expand('%:t:r')`} = styled.${2:div}\`
+export const ${1:`!v expand('%:t:r')`} = styled.${2:div}\`
 	$3
 \`;
-
-export default $1;
 endsnippet
 
 snippet rsci "React Styled Component Interpolation" b
