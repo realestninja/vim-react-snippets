@@ -33,9 +33,9 @@ export default connect(mapStateToProps)($1);
 endsnippet
 
 snippet rcc "React Class Component" b
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import styles from './${2:$1}.css';
+import React from "react";
+import PropTypes from "prop-types";
+import styles from "./${2:$1}.css";
 
 class ${1:`!v expand('%:t:r')`} extends Component {
 	static propTypes = {
@@ -193,7 +193,6 @@ endsnippet
 # PropTypes
 snippet pt "PropTypes Definition" b
 ${1:`!v expand('%:t:r')`.}propTypes = {
-	${2:className}: ${3:PropTypes.string},
 };
 endsnippet
 
