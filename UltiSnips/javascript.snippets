@@ -87,13 +87,13 @@ if props:
 export default $1;
 endsnippet
 
-snippet rsc "React Styled Component" b
+snippet rcs "React Styled Component" b
 export const ${1:`!v expand('%:t:r')`} = styled.${2:div}\`
 	$3
 \`;
 endsnippet
 
-snippet rsci "React Styled Component Interpolation" b
+snippet rcsi "React Styled Component Interpolation" b
 import styled, { css } from 'styled-components';
 
 const ${1:`!v expand('%:t:r')`} = styled.${2:div}\`${props => css\`
@@ -323,4 +323,27 @@ snippet mqt "(React Styled) Media Query Tablet" b
 ${tablet(css\`
 	${1}
 \`)}
+endsnippet
+
+snippet rsc "React Static Component" b
+import React from "react";
+import PropTypes from "prop-types";
+
+const ${1:`!v expand('%:t:r')`} = () => (
+);
+
+$1.propTypes = {
+};
+
+$1.defaultProps = {
+};
+
+export default $1;
+endsnippet
+
+snippet scs "Styled Components Styles" b
+import styled, { css } from "styled-components";
+
+export const $1 = styled.div\`
+\`;
 endsnippet
