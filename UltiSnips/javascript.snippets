@@ -3,7 +3,7 @@ snippet rrcc "React Redux Class Component" b
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import styles from './${2:$1}.css';
+import styles from './${2:$1}.styles';
 
 class ${1:`!v expand('%:t:r')`} extends Component {
 	static propTypes = {
@@ -35,26 +35,24 @@ endsnippet
 snippet rcc "React Class Component" b
 import React from "react";
 import PropTypes from "prop-types";
-import styles from "./${2:$1}.css";
+import {} from "./styles/${2:$1}.styles";
 
-class ${1:`!v expand('%:t:r')`} extends Component {
-	static propTypes = {
-		${2:children: PropTypes.node,
-		className: PropTypes.string,}
-	};
-
+class ${1:`!v expand('%:t:r')`} extends React.Component {
 	constructor(props) {
 		super(props);
 	}
 
 	render() {
 		return (
-			<${3:div} className={styles.base}>
-				$0
-			</$3>
 		);
 	}
 }
+
+$1.propTypes = {
+};
+
+$1.defaultProps = {
+};
 
 export default $1;
 endsnippet
@@ -319,10 +317,18 @@ ${desktop(css\`
 \`)}
 endsnippet
 
+snippet mqdi "(React Styled) Media Query Desktop import" b
+import { desktop } from "../../../lib/styles/mediaQueries";
+endsnippet
+
 snippet mqt "(React Styled) Media Query Tablet" b
 ${tablet(css\`
 	${1}
 \`)}
+endsnippet
+
+snippet mqti "(React Styled) Media Query Tablet import" b
+import { tablet } from "../../../lib/styles/mediaQueries";
 endsnippet
 
 snippet rsc "React Static Component" b
@@ -330,6 +336,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const ${1:`!v expand('%:t:r')`} = () => (
+	<span>$1</span>
 );
 
 $1.propTypes = {
