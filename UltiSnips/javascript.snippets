@@ -331,6 +331,12 @@ snippet mqti "(React Styled) Media Query Tablet import" b
 import { tablet } from "../../../lib/styles/mediaQueries";
 endsnippet
 
+snippet mqm "(React Styled) Media Query Mobile" b
+${mobile(css\`
+	${1}
+\`)}
+endsnippet
+
 snippet rsc "React Static Component" b
 import React from "react";
 import PropTypes from "prop-types";
@@ -351,6 +357,11 @@ endsnippet
 snippet scs "Styled Components Styles" b
 import styled, { css } from "styled-components";
 
+export const $1 = styled.div\`
+\`;
+endsnippet
+
+snippet scsc "Styled Components Styled Component" b
 export const $1 = styled.div\`
 \`;
 endsnippet
