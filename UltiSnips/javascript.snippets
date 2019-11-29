@@ -369,3 +369,11 @@ snippet scsc "Styled Components Styled Component" b
 export const $1 = styled.div\`
 \`;
 endsnippet
+
+snippet story "Storybook Template" b
+import React from "react";
+import { storiesOf } from "@storybook/react";
+
+storiesOf("$1", module)
+  .add("$2", () => <$3 />);
+endsnippet
